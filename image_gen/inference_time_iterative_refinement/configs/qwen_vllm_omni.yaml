@@ -1,0 +1,41 @@
+run:
+  mode: iterative_parallel
+  iterations: 4
+  parallel: 1
+  output_dir: outputs/qwen_vllm_omni
+  seed: 42
+
+generation:
+  width: 1024
+  height: 1024
+  size: 1024x1024
+  num_inference_steps: 50
+  true_cfg_scale: 4.0
+  guidance_scale: 1.0
+
+models:
+  generator:
+    provider: qwen-image
+    backend: vllm_omni
+    model: Qwen/Qwen-Image
+    base_url: ${QWEN_IMAGE_BASE_URL:-http://localhost:8091/v1}
+    generation_endpoint: chat
+  editor:
+    provider: qwen-image-edit
+    backend: vllm_omni
+    model: Qwen/Qwen-Image-Edit
+    base_url: ${QWEN_IMAGE_EDIT_BASE_URL:-http://localhost:8092/v1}
+    edit_endpoint: chat
+  critic:
+    provider: gemini
+    model: gemini-2.5-flash
+    api_key_env: GEMINI_API_KEY
+  verifier:
+    provider: gemini
+    model: gemini-2.5-flash
+    api_key_env: GEMINI_API_KEY
+  eval_verifier:
+    provider: gemini
+    model: gemini-2.5-pro
+    api_key_env: GEMINI_API_KEY
+

@@ -1,0 +1,56 @@
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local environments and secrets
+.env
+.env.*
+.venv/
+venv/
+env/
+ENV/
+
+# Logs and scheduler output
+*.log
+*.out
+*.err
+slurm-*
+wandb/
+logs/
+runs/
+lightning_logs/
+
+# Model/checkpoint artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+checkpoint-*/
+checkpoints/
+weights/
+
+# Data/cache artifacts
+*.pkl
+*.npy
+*.npz
+*.csv
+*.tsv
+*_cached*.pkl
+post_processing_dirs_processed.pkl
+
+# Local generated outputs. Curated examples stay tracked.
+**/outputs/*
+!**/outputs/sample_outputs/
+!**/outputs/sample_outputs/**
+
+# External repos downloaded by setup steps
+**/external/
+**/Grounded_SAM2/
+
+# Editor/OS junk
+.DS_Store
+*~

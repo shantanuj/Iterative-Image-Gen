@@ -1,0 +1,25 @@
+run:
+  mode: parallel
+  iterations: 1
+  parallel: 1
+  output_dir: outputs/smoke_mock
+
+models:
+  generator:
+    provider: wan-t2v-gradio
+    model: fake-gradio-smoke
+    base_url: ${SMOKE_GRADIO_BASE_URL:-http://localhost:8899}
+  editor:
+    provider: univideo-gradio
+    model: unused-in-parallel-smoke
+    base_url: http://localhost:9861
+  critic:
+    provider: mock
+  verifier:
+    provider: mock
+  eval_verifier: null
+
+questions:
+  auto: false
+  items:
+    - Is there a knight visible?

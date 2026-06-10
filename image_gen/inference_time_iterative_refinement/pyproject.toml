@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iterative-image-gen"
+version = "0.1.0"
+description = "Iterative refinement runner for compositional image generation."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "openai>=1.40.0",
+  "google-genai>=0.7.0",
+  "pillow>=10.0.0",
+  "pyyaml>=6.0.0",
+  "requests>=2.31.0",
+  "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+local = [
+  "accelerate>=0.30.0",
+  "diffusers>=0.31.0",
+  "torch>=2.3.0",
+  "transformers>=4.45.0",
+]
+dev = [
+  "pytest>=8.0.0",
+  "ruff>=0.6.0",
+]
+
+[project.scripts]
+iterative-image-gen = "iterative_img_gen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["iterative_img_gen*"]
+

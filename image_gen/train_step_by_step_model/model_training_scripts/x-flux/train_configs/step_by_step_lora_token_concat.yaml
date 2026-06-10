@@ -1,0 +1,45 @@
+model_name: "flux-dev"
+conditioning_mode: "token_concat"
+
+data_config:
+  train_batch_size: 1
+  num_workers: 8
+  img_size: 512
+  img_dir: "../../synthetic_data_creation/outputs/synthetic_flux_qwen/collated_train_pairs"
+  eval_img_dir: "../../synthetic_data_creation/outputs/synthetic_flux_qwen/collated_train_pairs"
+  random_ratio: false
+  filter_step0_images_with_max_k: null
+  used_cached_dataloader: false
+  skip_conditioning_on_0th_step: false
+  train_only_for_steps: "zero_and_first"
+  use_addition_prompt_v1: true
+
+resume_from_checkpoint: null
+report_to: "tensorboard"
+train_batch_size: 1
+output_dir: "outputs/step_by_step_lora_token_concat"
+val_output_dir: "outputs/step_by_step_lora_token_concat_val"
+guidance_train: 1
+guidance_eval: 4
+max_train_steps: 200000
+learning_rate: 1e-5
+lr_scheduler: "constant_with_warmup"
+lr_warmup_steps: 1500
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_weight_decay: 0.01
+adam_epsilon: 1e-8
+max_grad_norm: 1.0
+logging_dir: "logs"
+mixed_precision: "bf16"
+checkpointing_steps: 3000
+checkpoints_total_limit: 2
+use_global_prompt: true
+tracker_project_name: "iter_refine_step_by_step_flux_lora"
+gradient_accumulation_steps: 2
+rank: 16
+single_blocks: "1,2,3,4"
+double_blocks: null
+disable_sampling: false
+num_val_samples: 8
+sample_val_every: 1000

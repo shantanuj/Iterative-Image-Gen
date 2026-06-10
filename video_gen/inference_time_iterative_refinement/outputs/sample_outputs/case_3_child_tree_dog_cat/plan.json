@@ -1,0 +1,26 @@
+{
+  "mode": "step_by_step_parallel",
+  "core_prompt": "Original generation",
+  "core_questions": [
+    "Is a child walking toward a tree while holding a ball?",
+    "Is a dog walking to the right of the child?",
+    "Does a cat sit under the tree initially?",
+    "Does the cat start walking toward the dog?"
+  ],
+  "add_steps": [
+    {
+      "index": 0,
+      "edit_prompt": "Add a cat sitting calmly under the tree in the shade and then walking towards the dog.",
+      "questions_after_step": [
+        "Is a child walking toward a tree while holding a ball?",
+        "Is a dog walking to the right of the child?",
+        "Does a cat sit under the tree initially?",
+        "Does the cat start walking toward the dog?"
+      ]
+    }
+  ],
+  "max_steps": 1,
+  "raw_plan_response": "Step-by-step plan generated for the prompt.",
+  "raw_question_mapping_response": "Verifier questions generated from the target prompt.",
+  "notes": "step_by_step_parallel examples include internal verification/refinement decisions after each generated/edit step."
+}

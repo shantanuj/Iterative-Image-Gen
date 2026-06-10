@@ -1,0 +1,14 @@
+models:
+  critic:
+    provider: openrouter
+    model: google/gemini-2.5-flash
+    api_key_env: OPENROUTER_API_KEY
+    base_url: https://openrouter.ai/api/v1
+  verifier:
+    provider: qwen3vl
+    backend: openai_compatible
+    model: Qwen/Qwen3-VL-30B-A3B-Instruct
+    api_key_env: QWEN3VL_API_KEY
+    base_url: ${QWEN3VL_BASE_URL:-http://localhost:8000/v1}
+  eval_verifier: null
+

@@ -1,0 +1,319 @@
+{
+  "trajectory_id": "trajectory_0",
+  "output_dir": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0",
+  "steps": [
+    {
+      "step_index": 0,
+      "action": "CORE_GENERATION",
+      "prompt": "Intermediate core generation before applying refinement steps.",
+      "video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_0_core.mp4",
+      "source_video_path": null,
+      "verifier_scores": null,
+      "raw_verifier_response": null,
+      "raw_critic_response": null,
+      "critic_system_prompt": null,
+      "critic_user_prompt": null
+    },
+    {
+      "step_index": 1,
+      "action": "LOOKS_GOOD",
+      "prompt": "none",
+      "video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_0_core.mp4",
+      "source_video_path": null,
+      "verifier_scores": [
+        [
+          "Is a boy riding a bicycle along a road?",
+          1.0
+        ],
+        [
+          "Is a blue car driving behind the boy?",
+          1.0
+        ],
+        [
+          "Is a person walking in front of the boy?",
+          1.0
+        ],
+        [
+          "Is a traffic light standing to the left of the car?",
+          1.0
+        ],
+        [
+          "Is a bird flying above the road?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.8
+        ]
+      ],
+      "raw_verifier_response": "Is a boy riding a bicycle along a road?: yes\nIs a blue car driving behind the boy?: yes\nIs a person walking in front of the boy?: yes\nIs a traffic light standing to the left of the car?: yes\nIs a bird flying above the road?: no",
+      "raw_critic_response": "Action: LOOKS_GOOD\nPrompt: none",
+      "critic_system_prompt": "You are a video editing critic. Decide whether the current video satisfies the expected prompt elements and whether another edit is needed.",
+      "critic_user_prompt": "Target prompt: A boy rides a bicycle along a road. A blue car drives behind the boy. A person walks in front of the boy. A traffic light stands to the left of the car. A bird flies above the road.\nCurrent step: Intermediate core generation before applying refinement steps.\nDecision: continue with planned refinements.",
+      "notes": {
+        "critic_user_prompt": "Target prompt: A boy rides a bicycle along a road. A blue car drives behind the boy. A person walks in front of the boy. A traffic light stands to the left of the car. A bird flies above the road.\nCurrent step: Intermediate core generation before applying refinement steps.\nDecision: continue with planned refinements."
+      }
+    },
+    {
+      "step_index": 2,
+      "action": "ADD_STEP",
+      "prompt": "Add a bird flying across the frame above the road in the sky.",
+      "video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_2_add1.mp4",
+      "source_video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_0_core.mp4",
+      "verifier_scores": null,
+      "raw_verifier_response": null,
+      "raw_critic_response": null,
+      "critic_system_prompt": null,
+      "critic_user_prompt": null,
+      "notes": {
+        "add_step_index": 0
+      }
+    },
+    {
+      "step_index": 3,
+      "action": "LOOKS_GOOD",
+      "prompt": "none",
+      "video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_2_add1.mp4",
+      "source_video_path": null,
+      "verifier_scores": [
+        [
+          "Is a boy riding a bicycle along a road?",
+          1.0
+        ],
+        [
+          "Is a blue car driving behind the boy?",
+          1.0
+        ],
+        [
+          "Is a person walking in front of the boy?",
+          1.0
+        ],
+        [
+          "Is a traffic light standing to the left of the car?",
+          1.0
+        ],
+        [
+          "Is a bird flying above the road?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.8
+        ]
+      ],
+      "raw_verifier_response": "Is a boy riding a bicycle along a road?: yes\nIs a blue car driving behind the boy?: yes\nIs a person walking in front of the boy?: yes\nIs a traffic light standing to the left of the car?: yes\nIs a bird flying above the road?: no",
+      "raw_critic_response": "Action: LOOKS_GOOD\nPrompt: none",
+      "critic_system_prompt": "You are a video editing critic. Decide whether the current video satisfies the expected prompt elements and whether another edit is needed.",
+      "critic_user_prompt": "Target prompt: A boy rides a bicycle along a road. A blue car drives behind the boy. A person walks in front of the boy. A traffic light stands to the left of the car. A bird flies above the road.\nCurrent edit instruction: Add a bird flying across the frame above the road in the sky.\nDecision: LOOKS_GOOD based on the sample output trace.",
+      "notes": {
+        "label": "add1",
+        "attempt": 0,
+        "critic_user_prompt": "Target prompt: A boy rides a bicycle along a road. A blue car drives behind the boy. A person walks in front of the boy. A traffic light stands to the left of the car. A bird flies above the road.\nCurrent edit instruction: Add a bird flying across the frame above the road in the sky.\nDecision: LOOKS_GOOD based on the sample output trace."
+      }
+    },
+    {
+      "step_index": 4,
+      "action": "ADD_STEP",
+      "prompt": "Insert a bird flying above the boy.",
+      "video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_4_retry_add1.mp4",
+      "source_video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_2_add1.mp4",
+      "verifier_scores": null,
+      "raw_verifier_response": null,
+      "raw_critic_response": null,
+      "critic_system_prompt": null,
+      "critic_user_prompt": null,
+      "notes": {
+        "add_step_index": 1
+      }
+    },
+    {
+      "step_index": 5,
+      "action": "REPHRASE_AND_RETRY",
+      "prompt": "Insert a bird flying above the boy.",
+      "video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_4_retry_add1.mp4",
+      "source_video_path": null,
+      "verifier_scores": [
+        [
+          "Is a boy riding a bicycle along a road?",
+          1.0
+        ],
+        [
+          "Is a blue car driving behind the boy?",
+          1.0
+        ],
+        [
+          "Is a person walking in front of the boy?",
+          1.0
+        ],
+        [
+          "Is a traffic light standing to the left of the car?",
+          1.0
+        ],
+        [
+          "Is a bird flying above the road?",
+          1.0
+        ],
+        [
+          "Cumulative mean binary score",
+          1.0
+        ]
+      ],
+      "raw_verifier_response": "Is a boy riding a bicycle along a road?: yes\nIs a blue car driving behind the boy?: yes\nIs a person walking in front of the boy?: yes\nIs a traffic light standing to the left of the car?: yes\nIs a bird flying above the road?: yes",
+      "raw_critic_response": "Action: REPHRASE_AND_RETRY\nPrompt: Insert a bird flying above the boy.",
+      "critic_system_prompt": "You are a video editing critic. Decide whether the current video satisfies the expected prompt elements and whether another edit is needed.",
+      "critic_user_prompt": "Target prompt: A boy rides a bicycle along a road. A blue car drives behind the boy. A person walks in front of the boy. A traffic light stands to the left of the car. A bird flies above the road.\nCurrent edit instruction: Insert a bird flying above the boy.\nDecision: REPHRASE_AND_RETRY based on the sample output trace.",
+      "notes": {
+        "label": "add2",
+        "attempt": 0,
+        "critic_user_prompt": "Target prompt: A boy rides a bicycle along a road. A blue car drives behind the boy. A person walks in front of the boy. A traffic light stands to the left of the car. A bird flies above the road.\nCurrent edit instruction: Insert a bird flying above the boy.\nDecision: REPHRASE_AND_RETRY based on the sample output trace."
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_0_core.mp4",
+      "score": 0.8,
+      "verifier_scores": [
+        [
+          "Is a boy riding a bicycle along a road?",
+          1.0
+        ],
+        [
+          "Is a blue car driving behind the boy?",
+          1.0
+        ],
+        [
+          "Is a person walking in front of the boy?",
+          1.0
+        ],
+        [
+          "Is a traffic light standing to the left of the car?",
+          1.0
+        ],
+        [
+          "Is a bird flying above the road?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.8
+        ]
+      ],
+      "trajectory_id": "trajectory_0",
+      "step_index": 1,
+      "prompt": "Intermediate core generation before applying refinement steps.",
+      "action": "LOOKS_GOOD",
+      "eval_score": null,
+      "eval_verifier_scores": null
+    },
+    {
+      "video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_2_add1.mp4",
+      "score": 0.8,
+      "verifier_scores": [
+        [
+          "Is a boy riding a bicycle along a road?",
+          1.0
+        ],
+        [
+          "Is a blue car driving behind the boy?",
+          1.0
+        ],
+        [
+          "Is a person walking in front of the boy?",
+          1.0
+        ],
+        [
+          "Is a traffic light standing to the left of the car?",
+          1.0
+        ],
+        [
+          "Is a bird flying above the road?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.8
+        ]
+      ],
+      "trajectory_id": "trajectory_0",
+      "step_index": 3,
+      "prompt": "Add a bird flying across the frame above the road in the sky.",
+      "action": "LOOKS_GOOD",
+      "eval_score": null,
+      "eval_verifier_scores": null
+    },
+    {
+      "video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_4_retry_add1.mp4",
+      "score": 1.0,
+      "verifier_scores": [
+        [
+          "Is a boy riding a bicycle along a road?",
+          1.0
+        ],
+        [
+          "Is a blue car driving behind the boy?",
+          1.0
+        ],
+        [
+          "Is a person walking in front of the boy?",
+          1.0
+        ],
+        [
+          "Is a traffic light standing to the left of the car?",
+          1.0
+        ],
+        [
+          "Is a bird flying above the road?",
+          1.0
+        ],
+        [
+          "Cumulative mean binary score",
+          1.0
+        ]
+      ],
+      "trajectory_id": "trajectory_0",
+      "step_index": 5,
+      "prompt": "Insert a bird flying above the boy.",
+      "action": "REPHRASE_AND_RETRY",
+      "eval_score": null,
+      "eval_verifier_scores": null
+    }
+  ],
+  "best_candidate": {
+    "video_path": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_4_retry_add1.mp4",
+    "score": 1.0,
+    "verifier_scores": [
+      [
+        "Is a boy riding a bicycle along a road?",
+        1.0
+      ],
+      [
+        "Is a blue car driving behind the boy?",
+        1.0
+      ],
+      [
+        "Is a person walking in front of the boy?",
+        1.0
+      ],
+      [
+        "Is a traffic light standing to the left of the car?",
+        1.0
+      ],
+      [
+        "Is a bird flying above the road?",
+        1.0
+      ],
+      [
+        "Cumulative mean binary score",
+        1.0
+      ]
+    ],
+    "trajectory_id": "trajectory_0",
+    "step_index": 5,
+    "prompt": "Insert a bird flying above the boy.",
+    "action": "REPHRASE_AND_RETRY",
+    "eval_score": null,
+    "eval_verifier_scores": null
+  },
+  "text_log": "Prompt: A boy rides a bicycle along a road. A blue car drives behind the boy. A person walks in front of the boy. A traffic light stands to the left of the car. A bird flies above the road.\nBaseline: Baseline (Wan2.1). missing traffic light and bird.\nStep 0: Intermediate core generation before applying refinement steps.\nStep 1: Add a bird flying across the frame above the road in the sky.\nStep 2: Insert a bird flying above the boy.\nIter-Refine: aligned to prompt."
+}

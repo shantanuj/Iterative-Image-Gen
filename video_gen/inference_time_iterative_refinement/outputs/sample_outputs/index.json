@@ -1,0 +1,46 @@
+{
+  "description": "Release-format example outputs generated from the sample outputs.",
+  "cases": [
+    {
+      "case": "case_1_knight_castle_horse_bird",
+      "title": "Knight, castle, horse, and red bird",
+      "prompt": "A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.",
+      "run_dir": "outputs/sample_outputs/case_1_knight_castle_horse_bird",
+      "summary": "outputs/sample_outputs/case_1_knight_castle_horse_bird/summary.json",
+      "trajectory": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/trajectory.json",
+      "final_video": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4",
+      "baseline_video": "outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0.mp4"
+    },
+    {
+      "case": "case_2_garden_rabbit_butterfly",
+      "title": "Garden watering, rabbit, and butterfly",
+      "prompt": "A woman is watering flowers in garden while rabbit watches and yellow butterfly flies around.",
+      "run_dir": "outputs/sample_outputs/case_2_garden_rabbit_butterfly",
+      "summary": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/summary.json",
+      "trajectory": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/trajectory.json",
+      "final_video": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4",
+      "baseline_video": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0.mp4"
+    },
+    {
+      "case": "case_3_child_tree_dog_cat",
+      "title": "Child, tree, dog, and cat motion",
+      "prompt": "A child walks toward a tree holding a ball. A dog walks to the right of the child. A cat sits under the tree and starts walking towards the dog.",
+      "run_dir": "outputs/sample_outputs/case_3_child_tree_dog_cat",
+      "summary": "outputs/sample_outputs/case_3_child_tree_dog_cat/summary.json",
+      "trajectory": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/trajectory.json",
+      "final_video": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4",
+      "baseline_video": "outputs/sample_outputs/case_3_child_tree_dog_cat/parallel/sample_0.mp4"
+    },
+    {
+      "case": "case_4_bicycle_car_person_light_bird",
+      "title": "Bicycle road scene with traffic light and bird",
+      "prompt": "A boy rides a bicycle along a road. A blue car drives behind the boy. A person walks in front of the boy. A traffic light stands to the left of the car. A bird flies above the road.",
+      "run_dir": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird",
+      "summary": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/summary.json",
+      "trajectory": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/trajectory.json",
+      "final_video": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/trajectory_0/step_4_retry_add1.mp4",
+      "baseline_video": "outputs/sample_outputs/case_4_bicycle_car_person_light_bird/parallel/sample_0.mp4"
+    }
+  ],
+  "overview_video": "outputs/sample_outputs/overview/iter_gen_vid.mp4"
+}

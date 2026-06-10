@@ -1,0 +1,29 @@
+model_name: "flux-dev"
+
+data_config:
+  train_batch_size: 1
+  num_workers: 8
+  img_size: 512
+  img_dir: "../../synthetic_data_creation/outputs/synthetic_flux_qwen/collated_train_pairs"
+  random_ratio: false
+
+resume_from_checkpoint: null
+report_to: "tensorboard"
+train_batch_size: 1
+output_dir: "outputs/full_finetune_text_baseline"
+guidance_train: 4
+max_train_steps: 200000
+learning_rate: 1e-5
+lr_scheduler: "constant_with_warmup"
+lr_warmup_steps: 1500
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_weight_decay: 0.01
+adam_epsilon: 1e-8
+max_grad_norm: 1.0
+logging_dir: "logs"
+mixed_precision: "bf16"
+checkpointing_steps: 3000
+checkpoints_total_limit: 2
+tracker_project_name: "iter_refine_flux_full_finetune"
+gradient_accumulation_steps: 2

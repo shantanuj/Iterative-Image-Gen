@@ -1,0 +1,43 @@
+run:
+  mode: step_by_step_parallel
+  iterations: 3
+  parallel: 1
+  max_workers: null
+  output_dir: outputs/wan22_univideo_gemini
+
+method:
+  plan_prompt_style: embellished
+  max_add_steps: 2
+  max_refine_per_step: 2
+
+generation:
+  # Wan2.2-T2V-A14B supports 480P and 720P sizes including 832*480 and 1280*720.
+  resolution: "832*480"
+  num_frames: 37
+  num_steps: 40
+  guidance_scale: 4.0
+  flow_shift: 12.0
+  negative_prompt: ""
+
+models:
+  generator:
+    provider: wan2.2-t2v-gradio
+    model: Wan2.2-T2V-A14B
+    base_url: ${WAN22_T2V_BASE_URL:-http://localhost:8871}
+  editor:
+    provider: univideo-gradio
+    model: UniVideo
+    base_url: ${UNIVIDEO_EDIT_BASE_URL:-http://localhost:9861}
+  critic:
+    provider: gemini
+    model: gemini-2.5-flash
+    api_key_env: GEMINI_API_KEY
+    use_native_video: true
+    num_frames: 6
+  verifier:
+    provider: gemini
+    model: gemini-2.5-flash
+    api_key_env: GEMINI_API_KEY
+    use_native_video: true
+    num_frames: 6
+  eval_verifier: null

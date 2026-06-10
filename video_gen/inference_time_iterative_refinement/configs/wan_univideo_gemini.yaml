@@ -1,0 +1,33 @@
+run:
+  mode: step_by_step_parallel
+  iterations: 3
+  parallel: 1
+  max_workers: null
+  output_dir: outputs/wan_univideo_gemini
+
+method:
+  plan_prompt_style: embellished
+  max_refine_per_step: 2
+
+models:
+  generator:
+    provider: wan-t2v-gradio
+    model: Wan2.1-T2V
+    base_url: ${WAN_T2V_BASE_URL:-http://localhost:8861}
+  editor:
+    provider: univideo-gradio
+    model: UniVideo
+    base_url: ${UNIVIDEO_EDIT_BASE_URL:-http://localhost:9861}
+  critic:
+    provider: gemini
+    model: gemini-2.5-flash
+    api_key_env: GEMINI_API_KEY
+    use_native_video: true
+    num_frames: 6
+  verifier:
+    provider: gemini
+    model: gemini-2.5-flash
+    api_key_env: GEMINI_API_KEY
+    use_native_video: true
+    num_frames: 6
+  eval_verifier: null

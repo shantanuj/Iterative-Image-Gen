@@ -1,0 +1,186 @@
+{
+  "trajectory_id": "trajectory_0",
+  "output_dir": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0",
+  "steps": [
+    {
+      "step_index": 0,
+      "action": "CORE_GENERATION",
+      "prompt": "Original generation",
+      "video_path": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_0_core.mp4",
+      "source_video_path": null,
+      "verifier_scores": null,
+      "raw_verifier_response": null,
+      "raw_critic_response": null,
+      "critic_system_prompt": null,
+      "critic_user_prompt": null
+    },
+    {
+      "step_index": 1,
+      "action": "LOOKS_GOOD",
+      "prompt": "none",
+      "video_path": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_0_core.mp4",
+      "source_video_path": null,
+      "verifier_scores": [
+        [
+          "Is a woman watering flowers in a garden?",
+          1.0
+        ],
+        [
+          "Is a rabbit watching?",
+          1.0
+        ],
+        [
+          "Is a yellow butterfly flying around?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.6666666666666666
+        ]
+      ],
+      "raw_verifier_response": "Is a woman watering flowers in a garden?: yes\nIs a rabbit watching?: yes\nIs a yellow butterfly flying around?: no",
+      "raw_critic_response": "Action: LOOKS_GOOD\nPrompt: none",
+      "critic_system_prompt": "You are a video editing critic. Decide whether the current video satisfies the expected prompt elements and whether another edit is needed.",
+      "critic_user_prompt": "Target prompt: A woman is watering flowers in garden while rabbit watches and yellow butterfly flies around.\nCurrent step: Original generation\nDecision: continue with planned refinements.",
+      "notes": {
+        "critic_user_prompt": "Target prompt: A woman is watering flowers in garden while rabbit watches and yellow butterfly flies around.\nCurrent step: Original generation\nDecision: continue with planned refinements."
+      }
+    },
+    {
+      "step_index": 2,
+      "action": "ADD_STEP",
+      "prompt": "Add a yellow butterfly flying around the garden.",
+      "video_path": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4",
+      "source_video_path": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_0_core.mp4",
+      "verifier_scores": null,
+      "raw_verifier_response": null,
+      "raw_critic_response": null,
+      "critic_system_prompt": null,
+      "critic_user_prompt": null,
+      "notes": {
+        "add_step_index": 0
+      }
+    },
+    {
+      "step_index": 3,
+      "action": "LOOKS_GOOD",
+      "prompt": "none",
+      "video_path": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4",
+      "source_video_path": null,
+      "verifier_scores": [
+        [
+          "Is a woman watering flowers in a garden?",
+          1.0
+        ],
+        [
+          "Is a rabbit watching?",
+          1.0
+        ],
+        [
+          "Is a yellow butterfly flying around?",
+          1.0
+        ],
+        [
+          "Cumulative mean binary score",
+          1.0
+        ]
+      ],
+      "raw_verifier_response": "Is a woman watering flowers in a garden?: yes\nIs a rabbit watching?: yes\nIs a yellow butterfly flying around?: yes",
+      "raw_critic_response": "Action: LOOKS_GOOD\nPrompt: none",
+      "critic_system_prompt": "You are a video editing critic. Decide whether the current video satisfies the expected prompt elements and whether another edit is needed.",
+      "critic_user_prompt": "Target prompt: A woman is watering flowers in garden while rabbit watches and yellow butterfly flies around.\nCurrent edit instruction: Add a yellow butterfly flying around the garden.\nDecision: LOOKS_GOOD based on the sample output trace.",
+      "notes": {
+        "label": "add1",
+        "attempt": 0,
+        "critic_user_prompt": "Target prompt: A woman is watering flowers in garden while rabbit watches and yellow butterfly flies around.\nCurrent edit instruction: Add a yellow butterfly flying around the garden.\nDecision: LOOKS_GOOD based on the sample output trace."
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "video_path": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_0_core.mp4",
+      "score": 0.6666666666666666,
+      "verifier_scores": [
+        [
+          "Is a woman watering flowers in a garden?",
+          1.0
+        ],
+        [
+          "Is a rabbit watching?",
+          1.0
+        ],
+        [
+          "Is a yellow butterfly flying around?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.6666666666666666
+        ]
+      ],
+      "trajectory_id": "trajectory_0",
+      "step_index": 1,
+      "prompt": "Original generation",
+      "action": "LOOKS_GOOD",
+      "eval_score": null,
+      "eval_verifier_scores": null
+    },
+    {
+      "video_path": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4",
+      "score": 1.0,
+      "verifier_scores": [
+        [
+          "Is a woman watering flowers in a garden?",
+          1.0
+        ],
+        [
+          "Is a rabbit watching?",
+          1.0
+        ],
+        [
+          "Is a yellow butterfly flying around?",
+          1.0
+        ],
+        [
+          "Cumulative mean binary score",
+          1.0
+        ]
+      ],
+      "trajectory_id": "trajectory_0",
+      "step_index": 3,
+      "prompt": "Add a yellow butterfly flying around the garden.",
+      "action": "LOOKS_GOOD",
+      "eval_score": null,
+      "eval_verifier_scores": null
+    }
+  ],
+  "best_candidate": {
+    "video_path": "outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4",
+    "score": 1.0,
+    "verifier_scores": [
+      [
+        "Is a woman watering flowers in a garden?",
+        1.0
+      ],
+      [
+        "Is a rabbit watching?",
+        1.0
+      ],
+      [
+        "Is a yellow butterfly flying around?",
+        1.0
+      ],
+      [
+        "Cumulative mean binary score",
+        1.0
+      ]
+    ],
+    "trajectory_id": "trajectory_0",
+    "step_index": 3,
+    "prompt": "Add a yellow butterfly flying around the garden.",
+    "action": "LOOKS_GOOD",
+    "eval_score": null,
+    "eval_verifier_scores": null
+  },
+  "text_log": "Prompt: A woman is watering flowers in garden while rabbit watches and yellow butterfly flies around.\nBaseline: Baseline (Wan2.1). missing butterfly.\nStep 0: Original generation\nStep 1: Add a yellow butterfly flying around the garden.\nIter-Refine: aligned to prompt."
+}

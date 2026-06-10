@@ -1,0 +1,39 @@
+{
+  "mode": "step_by_step_parallel",
+  "core_prompt": "Intermediate core generation before applying refinement steps.",
+  "core_questions": [
+    "Is a boy riding a bicycle along a road?",
+    "Is a blue car driving behind the boy?",
+    "Is a person walking in front of the boy?",
+    "Is a traffic light standing to the left of the car?",
+    "Is a bird flying above the road?"
+  ],
+  "add_steps": [
+    {
+      "index": 0,
+      "edit_prompt": "Add a bird flying across the frame above the road in the sky.",
+      "questions_after_step": [
+        "Is a boy riding a bicycle along a road?",
+        "Is a blue car driving behind the boy?",
+        "Is a person walking in front of the boy?",
+        "Is a traffic light standing to the left of the car?",
+        "Is a bird flying above the road?"
+      ]
+    },
+    {
+      "index": 1,
+      "edit_prompt": "Insert a bird flying above the boy.",
+      "questions_after_step": [
+        "Is a boy riding a bicycle along a road?",
+        "Is a blue car driving behind the boy?",
+        "Is a person walking in front of the boy?",
+        "Is a traffic light standing to the left of the car?",
+        "Is a bird flying above the road?"
+      ]
+    }
+  ],
+  "max_steps": 2,
+  "raw_plan_response": "Step-by-step plan generated for the prompt.",
+  "raw_question_mapping_response": "Verifier questions generated from the target prompt.",
+  "notes": "step_by_step_parallel examples include internal verification/refinement decisions after each generated/edit step."
+}

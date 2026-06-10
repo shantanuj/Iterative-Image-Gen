@@ -1,0 +1,32 @@
+run:
+  mode: iterative_parallel
+  iterations: 4
+  parallel: 1
+  output_dir: outputs/nanobanana
+
+generation:
+  width: 1024
+  height: 1024
+
+models:
+  generator:
+    provider: nanobanana
+    model: gemini-2.5-flash-image-preview
+    api_key_env: GEMINI_API_KEY
+  editor:
+    provider: nanobanana
+    model: gemini-2.5-flash-image-preview
+    api_key_env: GEMINI_API_KEY
+  critic:
+    provider: gemini
+    model: gemini-2.5-flash
+    api_key_env: GEMINI_API_KEY
+  verifier:
+    provider: gemini
+    model: gemini-2.5-flash
+    api_key_env: GEMINI_API_KEY
+  eval_verifier:
+    provider: gemini
+    model: gemini-2.5-pro
+    api_key_env: GEMINI_API_KEY
+

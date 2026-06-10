@@ -1,0 +1,206 @@
+{
+  "trajectory_id": "trajectory_0",
+  "output_dir": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0",
+  "steps": [
+    {
+      "step_index": 0,
+      "action": "CORE_GENERATION",
+      "prompt": "Original generation",
+      "video_path": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_0_core.mp4",
+      "source_video_path": null,
+      "verifier_scores": null,
+      "raw_verifier_response": null,
+      "raw_critic_response": null,
+      "critic_system_prompt": null,
+      "critic_user_prompt": null
+    },
+    {
+      "step_index": 1,
+      "action": "LOOKS_GOOD",
+      "prompt": "none",
+      "video_path": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_0_core.mp4",
+      "source_video_path": null,
+      "verifier_scores": [
+        [
+          "Is a child walking toward a tree while holding a ball?",
+          1.0
+        ],
+        [
+          "Is a dog walking to the right of the child?",
+          1.0
+        ],
+        [
+          "Does a cat sit under the tree initially?",
+          0.0
+        ],
+        [
+          "Does the cat start walking toward the dog?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.5
+        ]
+      ],
+      "raw_verifier_response": "Is a child walking toward a tree while holding a ball?: yes\nIs a dog walking to the right of the child?: yes\nDoes a cat sit under the tree initially?: no\nDoes the cat start walking toward the dog?: no",
+      "raw_critic_response": "Action: LOOKS_GOOD\nPrompt: none",
+      "critic_system_prompt": "You are a video editing critic. Decide whether the current video satisfies the expected prompt elements and whether another edit is needed.",
+      "critic_user_prompt": "Target prompt: A child walks toward a tree holding a ball. A dog walks to the right of the child. A cat sits under the tree and starts walking towards the dog.\nCurrent step: Original generation\nDecision: continue with planned refinements.",
+      "notes": {
+        "critic_user_prompt": "Target prompt: A child walks toward a tree holding a ball. A dog walks to the right of the child. A cat sits under the tree and starts walking towards the dog.\nCurrent step: Original generation\nDecision: continue with planned refinements."
+      }
+    },
+    {
+      "step_index": 2,
+      "action": "ADD_STEP",
+      "prompt": "Add a cat sitting calmly under the tree in the shade and then walking towards the dog.",
+      "video_path": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4",
+      "source_video_path": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_0_core.mp4",
+      "verifier_scores": null,
+      "raw_verifier_response": null,
+      "raw_critic_response": null,
+      "critic_system_prompt": null,
+      "critic_user_prompt": null,
+      "notes": {
+        "add_step_index": 0
+      }
+    },
+    {
+      "step_index": 3,
+      "action": "LOOKS_GOOD",
+      "prompt": "none",
+      "video_path": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4",
+      "source_video_path": null,
+      "verifier_scores": [
+        [
+          "Is a child walking toward a tree while holding a ball?",
+          1.0
+        ],
+        [
+          "Is a dog walking to the right of the child?",
+          1.0
+        ],
+        [
+          "Does a cat sit under the tree initially?",
+          1.0
+        ],
+        [
+          "Does the cat start walking toward the dog?",
+          1.0
+        ],
+        [
+          "Cumulative mean binary score",
+          1.0
+        ]
+      ],
+      "raw_verifier_response": "Is a child walking toward a tree while holding a ball?: yes\nIs a dog walking to the right of the child?: yes\nDoes a cat sit under the tree initially?: yes\nDoes the cat start walking toward the dog?: yes",
+      "raw_critic_response": "Action: LOOKS_GOOD\nPrompt: none",
+      "critic_system_prompt": "You are a video editing critic. Decide whether the current video satisfies the expected prompt elements and whether another edit is needed.",
+      "critic_user_prompt": "Target prompt: A child walks toward a tree holding a ball. A dog walks to the right of the child. A cat sits under the tree and starts walking towards the dog.\nCurrent edit instruction: Add a cat sitting calmly under the tree in the shade and then walking towards the dog.\nDecision: LOOKS_GOOD based on the sample output trace.",
+      "notes": {
+        "label": "add1",
+        "attempt": 0,
+        "critic_user_prompt": "Target prompt: A child walks toward a tree holding a ball. A dog walks to the right of the child. A cat sits under the tree and starts walking towards the dog.\nCurrent edit instruction: Add a cat sitting calmly under the tree in the shade and then walking towards the dog.\nDecision: LOOKS_GOOD based on the sample output trace."
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "video_path": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_0_core.mp4",
+      "score": 0.5,
+      "verifier_scores": [
+        [
+          "Is a child walking toward a tree while holding a ball?",
+          1.0
+        ],
+        [
+          "Is a dog walking to the right of the child?",
+          1.0
+        ],
+        [
+          "Does a cat sit under the tree initially?",
+          0.0
+        ],
+        [
+          "Does the cat start walking toward the dog?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.5
+        ]
+      ],
+      "trajectory_id": "trajectory_0",
+      "step_index": 1,
+      "prompt": "Original generation",
+      "action": "LOOKS_GOOD",
+      "eval_score": null,
+      "eval_verifier_scores": null
+    },
+    {
+      "video_path": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4",
+      "score": 1.0,
+      "verifier_scores": [
+        [
+          "Is a child walking toward a tree while holding a ball?",
+          1.0
+        ],
+        [
+          "Is a dog walking to the right of the child?",
+          1.0
+        ],
+        [
+          "Does a cat sit under the tree initially?",
+          1.0
+        ],
+        [
+          "Does the cat start walking toward the dog?",
+          1.0
+        ],
+        [
+          "Cumulative mean binary score",
+          1.0
+        ]
+      ],
+      "trajectory_id": "trajectory_0",
+      "step_index": 3,
+      "prompt": "Add a cat sitting calmly under the tree in the shade and then walking towards the dog.",
+      "action": "LOOKS_GOOD",
+      "eval_score": null,
+      "eval_verifier_scores": null
+    }
+  ],
+  "best_candidate": {
+    "video_path": "outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4",
+    "score": 1.0,
+    "verifier_scores": [
+      [
+        "Is a child walking toward a tree while holding a ball?",
+        1.0
+      ],
+      [
+        "Is a dog walking to the right of the child?",
+        1.0
+      ],
+      [
+        "Does a cat sit under the tree initially?",
+        1.0
+      ],
+      [
+        "Does the cat start walking toward the dog?",
+        1.0
+      ],
+      [
+        "Cumulative mean binary score",
+        1.0
+      ]
+    ],
+    "trajectory_id": "trajectory_0",
+    "step_index": 3,
+    "prompt": "Add a cat sitting calmly under the tree in the shade and then walking towards the dog.",
+    "action": "LOOKS_GOOD",
+    "eval_score": null,
+    "eval_verifier_scores": null
+  },
+  "text_log": "Prompt: A child walks toward a tree holding a ball. A dog walks to the right of the child. A cat sits under the tree and starts walking towards the dog.\nBaseline: Baseline (Wan2.1). cat is not sitting initially or walking to dog.\nStep 0: Original generation\nStep 1: Add a cat sitting calmly under the tree in the shade and then walking towards the dog.\nIter-Refine: aligned to prompt."
+}

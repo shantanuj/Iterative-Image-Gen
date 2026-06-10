@@ -1,0 +1,32 @@
+run:
+  mode: iterative_parallel
+  iterations: 4
+  parallel: 1
+  output_dir: outputs/gpt_image
+
+generation:
+  size: 1024x1024
+  quality: low
+
+models:
+  generator:
+    provider: gpt-image
+    model: gpt-image-1
+    api_key_env: OPENAI_API_KEY
+  editor:
+    provider: gpt-image
+    model: gpt-image-1
+    api_key_env: OPENAI_API_KEY
+  critic:
+    provider: gpt
+    model: gpt-4o
+    api_key_env: OPENAI_API_KEY
+  verifier:
+    provider: gpt
+    model: gpt-4o
+    api_key_env: OPENAI_API_KEY
+  eval_verifier:
+    provider: gpt
+    model: gpt-4o
+    api_key_env: OPENAI_API_KEY
+

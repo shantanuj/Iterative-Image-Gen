@@ -1,0 +1,42 @@
+{
+  "mode": "step_by_step_parallel",
+  "core_prompt": "Original generation",
+  "core_questions": [
+    "Is there a knight walking toward a castle?",
+    "Is the knight carrying a sword?",
+    "Is there a dragon on top of the castle?",
+    "Is the dragon emitting flames from its mouth?",
+    "Is there a white horse walking on the left of the knight?",
+    "Is there a red bird flying in the background?"
+  ],
+  "add_steps": [
+    {
+      "index": 0,
+      "edit_prompt": "Add a white horse walking on left of the knight.",
+      "questions_after_step": [
+        "Is there a knight walking toward a castle?",
+        "Is the knight carrying a sword?",
+        "Is there a dragon on top of the castle?",
+        "Is the dragon emitting flames from its mouth?",
+        "Is there a white horse walking on the left of the knight?",
+        "Is there a red bird flying in the background?"
+      ]
+    },
+    {
+      "index": 1,
+      "edit_prompt": "Add a red bird flying in the background.",
+      "questions_after_step": [
+        "Is there a knight walking toward a castle?",
+        "Is the knight carrying a sword?",
+        "Is there a dragon on top of the castle?",
+        "Is the dragon emitting flames from its mouth?",
+        "Is there a white horse walking on the left of the knight?",
+        "Is there a red bird flying in the background?"
+      ]
+    }
+  ],
+  "max_steps": 2,
+  "raw_plan_response": "Step-by-step plan generated for the prompt.",
+  "raw_question_mapping_response": "Verifier questions generated from the target prompt.",
+  "notes": "step_by_step_parallel examples include internal verification/refinement decisions after each generated/edit step."
+}

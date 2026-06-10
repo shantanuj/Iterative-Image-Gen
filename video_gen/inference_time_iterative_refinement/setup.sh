@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ENV_NAME="${1:-iterative-video-gen}"
+MICROMAMBA_BIN="${MAMBA_EXE:-micromamba}"
+
+if ! command -v "$MICROMAMBA_BIN" >/dev/null 2>&1; then
+  echo "micromamba not found. Set MAMBA_EXE or install micromamba first." >&2
+  exit 1
+fi
+
+if "$MICROMAMBA_BIN" env list | awk '{print $1}' | grep -qx "$ENV_NAME"; then
+  echo "Using existing micromamba environment: $ENV_NAME"
+else
+  "$MICROMAMBA_BIN" create -y -n "$ENV_NAME" -c conda-forge python=3.11 pip ffmpeg
+fi
+
+"$MICROMAMBA_BIN" run -n "$ENV_NAME" python -m pip install --upgrade pip
+if [[ -n "${INSTALL_EXTRAS:-}" ]]; then
+  "$MICROMAMBA_BIN" run -n "$ENV_NAME" python -m pip install -e ".[${INSTALL_EXTRAS}]"
+else
+  "$MICROMAMBA_BIN" run -n "$ENV_NAME" python -m pip install -e .
+fi
+
+echo "Environment ready: $ENV_NAME"
+echo "Activate with: micromamba activate $ENV_NAME"

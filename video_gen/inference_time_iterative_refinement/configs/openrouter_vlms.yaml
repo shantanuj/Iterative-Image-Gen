@@ -1,0 +1,26 @@
+run:
+  mode: step_by_step_parallel
+  iterations: 3
+  parallel: 1
+  output_dir: outputs/wan_univideo_openrouter
+
+models:
+  generator:
+    provider: wan-t2v-gradio
+    model: Wan2.1-T2V
+    base_url: ${WAN_T2V_BASE_URL:-http://localhost:8861}
+  editor:
+    provider: univideo-gradio
+    model: UniVideo
+    base_url: ${UNIVIDEO_EDIT_BASE_URL:-http://localhost:9861}
+  critic:
+    provider: openrouter
+    model: openai/gpt-4o
+    api_key_env: OPENROUTER_API_KEY
+    num_frames: 6
+  verifier:
+    provider: openrouter
+    model: openai/gpt-4o
+    api_key_env: OPENROUTER_API_KEY
+    num_frames: 6
+  eval_verifier: null

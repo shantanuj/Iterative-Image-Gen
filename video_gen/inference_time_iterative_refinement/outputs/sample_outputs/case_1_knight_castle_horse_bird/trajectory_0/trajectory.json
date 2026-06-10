@@ -1,0 +1,347 @@
+{
+  "trajectory_id": "trajectory_0",
+  "output_dir": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0",
+  "steps": [
+    {
+      "step_index": 0,
+      "action": "CORE_GENERATION",
+      "prompt": "Original generation",
+      "video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_0_core.mp4",
+      "source_video_path": null,
+      "verifier_scores": null,
+      "raw_verifier_response": null,
+      "raw_critic_response": null,
+      "critic_system_prompt": null,
+      "critic_user_prompt": null
+    },
+    {
+      "step_index": 1,
+      "action": "LOOKS_GOOD",
+      "prompt": "none",
+      "video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_0_core.mp4",
+      "source_video_path": null,
+      "verifier_scores": [
+        [
+          "Is there a knight walking toward a castle?",
+          1.0
+        ],
+        [
+          "Is the knight carrying a sword?",
+          1.0
+        ],
+        [
+          "Is there a dragon on top of the castle?",
+          1.0
+        ],
+        [
+          "Is the dragon emitting flames from its mouth?",
+          1.0
+        ],
+        [
+          "Is there a white horse walking on the left of the knight?",
+          0.0
+        ],
+        [
+          "Is there a red bird flying in the background?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.6666666666666666
+        ]
+      ],
+      "raw_verifier_response": "Is there a knight walking toward a castle?: yes\nIs the knight carrying a sword?: yes\nIs there a dragon on top of the castle?: yes\nIs the dragon emitting flames from its mouth?: yes\nIs there a white horse walking on the left of the knight?: no\nIs there a red bird flying in the background?: no",
+      "raw_critic_response": "Action: LOOKS_GOOD\nPrompt: none",
+      "critic_system_prompt": "You are a video editing critic. Decide whether the current video satisfies the expected prompt elements and whether another edit is needed.",
+      "critic_user_prompt": "Target prompt: A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.\nCurrent step: Original generation\nDecision: continue with planned refinements.",
+      "notes": {
+        "critic_user_prompt": "Target prompt: A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.\nCurrent step: Original generation\nDecision: continue with planned refinements."
+      }
+    },
+    {
+      "step_index": 2,
+      "action": "ADD_STEP",
+      "prompt": "Add a white horse walking on left of the knight.",
+      "video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_2_add1.mp4",
+      "source_video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_0_core.mp4",
+      "verifier_scores": null,
+      "raw_verifier_response": null,
+      "raw_critic_response": null,
+      "critic_system_prompt": null,
+      "critic_user_prompt": null,
+      "notes": {
+        "add_step_index": 0
+      }
+    },
+    {
+      "step_index": 3,
+      "action": "LOOKS_GOOD",
+      "prompt": "none",
+      "video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_2_add1.mp4",
+      "source_video_path": null,
+      "verifier_scores": [
+        [
+          "Is there a knight walking toward a castle?",
+          1.0
+        ],
+        [
+          "Is the knight carrying a sword?",
+          1.0
+        ],
+        [
+          "Is there a dragon on top of the castle?",
+          1.0
+        ],
+        [
+          "Is the dragon emitting flames from its mouth?",
+          1.0
+        ],
+        [
+          "Is there a white horse walking on the left of the knight?",
+          1.0
+        ],
+        [
+          "Is there a red bird flying in the background?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.8333333333333334
+        ]
+      ],
+      "raw_verifier_response": "Is there a knight walking toward a castle?: yes\nIs the knight carrying a sword?: yes\nIs there a dragon on top of the castle?: yes\nIs the dragon emitting flames from its mouth?: yes\nIs there a white horse walking on the left of the knight?: yes\nIs there a red bird flying in the background?: no",
+      "raw_critic_response": "Action: LOOKS_GOOD\nPrompt: none",
+      "critic_system_prompt": "You are a video editing critic. Decide whether the current video satisfies the expected prompt elements and whether another edit is needed.",
+      "critic_user_prompt": "Target prompt: A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.\nCurrent edit instruction: Add a white horse walking on left of the knight.\nDecision: LOOKS_GOOD based on the sample output trace.",
+      "notes": {
+        "label": "add1",
+        "attempt": 0,
+        "critic_user_prompt": "Target prompt: A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.\nCurrent edit instruction: Add a white horse walking on left of the knight.\nDecision: LOOKS_GOOD based on the sample output trace."
+      }
+    },
+    {
+      "step_index": 4,
+      "action": "ADD_STEP",
+      "prompt": "Add a red bird flying in the background.",
+      "video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4",
+      "source_video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_2_add1.mp4",
+      "verifier_scores": null,
+      "raw_verifier_response": null,
+      "raw_critic_response": null,
+      "critic_system_prompt": null,
+      "critic_user_prompt": null,
+      "notes": {
+        "add_step_index": 1
+      }
+    },
+    {
+      "step_index": 5,
+      "action": "LOOKS_GOOD",
+      "prompt": "none",
+      "video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4",
+      "source_video_path": null,
+      "verifier_scores": [
+        [
+          "Is there a knight walking toward a castle?",
+          1.0
+        ],
+        [
+          "Is the knight carrying a sword?",
+          1.0
+        ],
+        [
+          "Is there a dragon on top of the castle?",
+          1.0
+        ],
+        [
+          "Is the dragon emitting flames from its mouth?",
+          1.0
+        ],
+        [
+          "Is there a white horse walking on the left of the knight?",
+          1.0
+        ],
+        [
+          "Is there a red bird flying in the background?",
+          1.0
+        ],
+        [
+          "Cumulative mean binary score",
+          1.0
+        ]
+      ],
+      "raw_verifier_response": "Is there a knight walking toward a castle?: yes\nIs the knight carrying a sword?: yes\nIs there a dragon on top of the castle?: yes\nIs the dragon emitting flames from its mouth?: yes\nIs there a white horse walking on the left of the knight?: yes\nIs there a red bird flying in the background?: yes",
+      "raw_critic_response": "Action: LOOKS_GOOD\nPrompt: none",
+      "critic_system_prompt": "You are a video editing critic. Decide whether the current video satisfies the expected prompt elements and whether another edit is needed.",
+      "critic_user_prompt": "Target prompt: A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.\nCurrent edit instruction: Add a red bird flying in the background.\nDecision: LOOKS_GOOD based on the sample output trace.",
+      "notes": {
+        "label": "add2",
+        "attempt": 0,
+        "critic_user_prompt": "Target prompt: A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.\nCurrent edit instruction: Add a red bird flying in the background.\nDecision: LOOKS_GOOD based on the sample output trace."
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_0_core.mp4",
+      "score": 0.6666666666666666,
+      "verifier_scores": [
+        [
+          "Is there a knight walking toward a castle?",
+          1.0
+        ],
+        [
+          "Is the knight carrying a sword?",
+          1.0
+        ],
+        [
+          "Is there a dragon on top of the castle?",
+          1.0
+        ],
+        [
+          "Is the dragon emitting flames from its mouth?",
+          1.0
+        ],
+        [
+          "Is there a white horse walking on the left of the knight?",
+          0.0
+        ],
+        [
+          "Is there a red bird flying in the background?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.6666666666666666
+        ]
+      ],
+      "trajectory_id": "trajectory_0",
+      "step_index": 1,
+      "prompt": "Original generation",
+      "action": "LOOKS_GOOD",
+      "eval_score": null,
+      "eval_verifier_scores": null
+    },
+    {
+      "video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_2_add1.mp4",
+      "score": 0.8333333333333334,
+      "verifier_scores": [
+        [
+          "Is there a knight walking toward a castle?",
+          1.0
+        ],
+        [
+          "Is the knight carrying a sword?",
+          1.0
+        ],
+        [
+          "Is there a dragon on top of the castle?",
+          1.0
+        ],
+        [
+          "Is the dragon emitting flames from its mouth?",
+          1.0
+        ],
+        [
+          "Is there a white horse walking on the left of the knight?",
+          1.0
+        ],
+        [
+          "Is there a red bird flying in the background?",
+          0.0
+        ],
+        [
+          "Cumulative mean binary score",
+          0.8333333333333334
+        ]
+      ],
+      "trajectory_id": "trajectory_0",
+      "step_index": 3,
+      "prompt": "Add a white horse walking on left of the knight.",
+      "action": "LOOKS_GOOD",
+      "eval_score": null,
+      "eval_verifier_scores": null
+    },
+    {
+      "video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4",
+      "score": 1.0,
+      "verifier_scores": [
+        [
+          "Is there a knight walking toward a castle?",
+          1.0
+        ],
+        [
+          "Is the knight carrying a sword?",
+          1.0
+        ],
+        [
+          "Is there a dragon on top of the castle?",
+          1.0
+        ],
+        [
+          "Is the dragon emitting flames from its mouth?",
+          1.0
+        ],
+        [
+          "Is there a white horse walking on the left of the knight?",
+          1.0
+        ],
+        [
+          "Is there a red bird flying in the background?",
+          1.0
+        ],
+        [
+          "Cumulative mean binary score",
+          1.0
+        ]
+      ],
+      "trajectory_id": "trajectory_0",
+      "step_index": 5,
+      "prompt": "Add a red bird flying in the background.",
+      "action": "LOOKS_GOOD",
+      "eval_score": null,
+      "eval_verifier_scores": null
+    }
+  ],
+  "best_candidate": {
+    "video_path": "outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4",
+    "score": 1.0,
+    "verifier_scores": [
+      [
+        "Is there a knight walking toward a castle?",
+        1.0
+      ],
+      [
+        "Is the knight carrying a sword?",
+        1.0
+      ],
+      [
+        "Is there a dragon on top of the castle?",
+        1.0
+      ],
+      [
+        "Is the dragon emitting flames from its mouth?",
+        1.0
+      ],
+      [
+        "Is there a white horse walking on the left of the knight?",
+        1.0
+      ],
+      [
+        "Is there a red bird flying in the background?",
+        1.0
+      ],
+      [
+        "Cumulative mean binary score",
+        1.0
+      ]
+    ],
+    "trajectory_id": "trajectory_0",
+    "step_index": 5,
+    "prompt": "Add a red bird flying in the background.",
+    "action": "LOOKS_GOOD",
+    "eval_score": null,
+    "eval_verifier_scores": null
+  },
+  "text_log": "Prompt: A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.\nBaseline: Baseline (Wan2.1). missing red bird.\nStep 0: Original generation\nStep 1: Add a white horse walking on left of the knight.\nStep 2: Add a red bird flying in the background.\nIter-Refine: aligned to prompt."
+}

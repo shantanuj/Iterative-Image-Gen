@@ -1,0 +1,39 @@
+run:
+  mode: iterative_parallel
+  iterations: 4
+  parallel: 1
+  output_dir: outputs/flux_vllm_omni
+
+generation:
+  width: 1024
+  height: 1024
+  size: 1024x1024
+  num_inference_steps: 50
+  guidance_scale: 3.5
+
+models:
+  generator:
+    provider: flux-dev
+    backend: vllm_omni
+    model: black-forest-labs/FLUX.1-dev
+    base_url: ${FLUX_DEV_BASE_URL:-http://localhost:8093/v1}
+    generation_endpoint: chat
+  editor:
+    provider: flux-kontext
+    backend: vllm_omni
+    model: black-forest-labs/FLUX.1-Kontext-dev
+    base_url: ${FLUX_KONTEXT_BASE_URL:-http://localhost:8094/v1}
+    edit_endpoint: chat
+  critic:
+    provider: gemini
+    model: gemini-2.5-flash
+    api_key_env: GEMINI_API_KEY
+  verifier:
+    provider: gemini
+    model: gemini-2.5-flash
+    api_key_env: GEMINI_API_KEY
+  eval_verifier:
+    provider: gemini
+    model: gemini-2.5-pro
+    api_key_env: GEMINI_API_KEY
+

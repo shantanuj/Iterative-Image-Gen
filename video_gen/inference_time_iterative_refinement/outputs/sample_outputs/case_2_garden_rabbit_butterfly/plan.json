@@ -1,0 +1,24 @@
+{
+  "mode": "step_by_step_parallel",
+  "core_prompt": "Original generation",
+  "core_questions": [
+    "Is a woman watering flowers in a garden?",
+    "Is a rabbit watching?",
+    "Is a yellow butterfly flying around?"
+  ],
+  "add_steps": [
+    {
+      "index": 0,
+      "edit_prompt": "Add a yellow butterfly flying around the garden.",
+      "questions_after_step": [
+        "Is a woman watering flowers in a garden?",
+        "Is a rabbit watching?",
+        "Is a yellow butterfly flying around?"
+      ]
+    }
+  ],
+  "max_steps": 1,
+  "raw_plan_response": "Step-by-step plan generated for the prompt.",
+  "raw_question_mapping_response": "Verifier questions generated from the target prompt.",
+  "notes": "step_by_step_parallel examples include internal verification/refinement decisions after each generated/edit step."
+}

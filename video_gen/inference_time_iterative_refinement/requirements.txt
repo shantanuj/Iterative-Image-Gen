@@ -1,0 +1,7 @@
+openai>=1.40.0
+google-genai>=0.7.0
+pillow>=10.0.0
+pyyaml>=6.0.0
+requests>=2.31.0
+opencv-python-headless>=4.9.0.80
+imageio[ffmpeg]>=2.34.0

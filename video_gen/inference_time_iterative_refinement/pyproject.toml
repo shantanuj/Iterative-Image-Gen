@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iterative-video-gen"
+version = "0.1.0"
+description = "Iterative refinement runner for compositional video generation."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "openai>=1.40.0",
+  "google-genai>=0.7.0",
+  "pillow>=10.0.0",
+  "pyyaml>=6.0.0",
+  "requests>=2.31.0",
+  "opencv-python-headless>=4.9.0.80",
+  "imageio[ffmpeg]>=2.34.0",
+]
+
+[project.optional-dependencies]
+local = [
+  "accelerate>=0.30.0",
+  "torch>=2.3.0",
+  "transformers>=4.45.0",
+]
+dev = [
+  "pytest>=8.0.0",
+  "ruff>=0.6.0",
+]
+
+[project.scripts]
+iterative-video-gen = "iterative_video_gen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["iterative_video_gen*"]
