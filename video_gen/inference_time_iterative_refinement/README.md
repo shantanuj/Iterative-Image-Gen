@@ -341,19 +341,19 @@ Example outputs are included under `outputs/sample_outputs/`. The examples below
 
 | Baseline | Iterative Refinement |
 | --- | --- |
-| <video src="https://raw.githubusercontent.com/shantanuj/Iterative-Image-Gen/main/video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0.mp4" width="400" controls muted loop></video> | <video src="https://raw.githubusercontent.com/shantanuj/Iterative-Image-Gen/main/video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4" width="400" controls muted loop></video> |
+| [<img src="outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0_preview.gif" width="400">](outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0.mp4) | [<img src="outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2_preview.gif" width="400">](outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4) |
 
 <p><sub><b>Prompt:</b> A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.</sub></p>
 
 | Baseline | Iterative Refinement |
 | --- | --- |
-| <video src="https://raw.githubusercontent.com/shantanuj/Iterative-Image-Gen/main/video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0.mp4" width="400" controls muted loop></video> | <video src="https://raw.githubusercontent.com/shantanuj/Iterative-Image-Gen/main/video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4" width="400" controls muted loop></video> |
+| [<img src="outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0_preview.gif" width="400">](outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0.mp4) | [<img src="outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1_preview.gif" width="400">](outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4) |
 
 <p><sub><b>Prompt:</b> A woman is watering flowers in garden while rabbit watches and yellow butterfly flies around.</sub></p>
 
 | Baseline | Iterative Refinement |
 | --- | --- |
-| <video src="https://raw.githubusercontent.com/shantanuj/Iterative-Image-Gen/main/video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_3_child_tree_dog_cat/parallel/sample_0.mp4" width="400" controls muted loop></video> | <video src="https://raw.githubusercontent.com/shantanuj/Iterative-Image-Gen/main/video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4" width="400" controls muted loop></video> |
+| [<img src="outputs/sample_outputs/case_3_child_tree_dog_cat/parallel/sample_0_preview.gif" width="400">](outputs/sample_outputs/case_3_child_tree_dog_cat/parallel/sample_0.mp4) | [<img src="outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1_preview.gif" width="400">](outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4) |
 
 <p><sub><b>Prompt:</b> A child walks toward a tree holding a ball. A dog walks to the right of the child. A cat sits under the tree and starts walking towards the dog.</sub></p>
 

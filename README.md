@@ -20,7 +20,7 @@ The image and video inference code runs the test-time iterative refinement loop.
 
 | Baseline | Iterative Refinement |
 | --- | --- |
-| <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/qwen.jpg" width="400"> | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/iter_refine.jpg" width="400"> |
+| <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/gpt.jpg" width="400"> | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/iter_refine.jpg" width="400"> |
 
 <p><sub><b>Prompt:</b> Four ducks are standing on the ground, and a tiny pink giraffe is standing in front of them holding a bottle with a ship inside it. Five novels are placed on the ground behind the ducks. The image is in a cartoon style.</sub></p>
 
@@ -52,13 +52,13 @@ The image and video inference code runs the test-time iterative refinement loop.
 
 | Baseline | Iterative Refinement |
 | --- | --- |
-| <video src="https://raw.githubusercontent.com/shantanuj/Iterative-Image-Gen/main/video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0.mp4" width="400" controls muted loop></video> | <video src="https://raw.githubusercontent.com/shantanuj/Iterative-Image-Gen/main/video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4" width="400" controls muted loop></video> |
+| [<img src="video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0_preview.gif" width="400">](video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0.mp4) | [<img src="video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2_preview.gif" width="400">](video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4) |
 
 <p><sub><b>Prompt:</b> A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.</sub></p>
 
 | Baseline | Iterative Refinement |
 | --- | --- |
-| <video src="https://raw.githubusercontent.com/shantanuj/Iterative-Image-Gen/main/video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0.mp4" width="400" controls muted loop></video> | <video src="https://raw.githubusercontent.com/shantanuj/Iterative-Image-Gen/main/video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4" width="400" controls muted loop></video> |
+| [<img src="video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0_preview.gif" width="400">](video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0.mp4) | [<img src="video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1_preview.gif" width="400">](video_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4) |
 
 <p><sub><b>Prompt:</b> A woman is watering flowers in garden while rabbit watches and yellow butterfly flies around.</sub></p>
 

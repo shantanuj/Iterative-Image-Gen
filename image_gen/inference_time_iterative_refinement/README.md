@@ -192,7 +192,7 @@ Example outputs are included under `outputs/sample_outputs/`. The examples below
 
 | Baseline | Iterative Refinement |
 | --- | --- |
-| <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/qwen.jpg" width="400"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/iter_refine.jpg" width="400"> |
+| <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/gpt.jpg" width="400"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/iter_refine.jpg" width="400"> |
 
 <p><sub><b>Prompt:</b> Four ducks are standing on the ground, and a tiny pink giraffe is standing in front of them holding a bottle with a ship inside it. Five novels are placed on the ground behind the ducks. The image is in a cartoon style.</sub></p>
 
