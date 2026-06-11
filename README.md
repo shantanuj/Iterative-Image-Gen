@@ -94,9 +94,13 @@ The training pipeline creates synthetic step-by-step examples by starting from a
 
 Example generations from a trained step-by-step FLUX LoRA model:
 
-| Trained Model Example 1 | Trained Model Example 2 |
-| --- | --- |
-| <img src="image_gen/train_step_by_step_model/model_training_scripts/x-flux/outputs/sample_outputs/trained_step_by_step_generation_1.png" width="260"> | <img src="image_gen/train_step_by_step_model/model_training_scripts/x-flux/outputs/sample_outputs/trained_step_by_step_generation_2.png" width="260"> |
+| Trained Model Example 1 |
+| --- |
+| <img src="image_gen/train_step_by_step_model/model_training_scripts/x-flux/outputs/sample_outputs/trained_step_by_step_generation_1.png" width="560"> |
+
+| Trained Model Example 2 |
+| --- |
+| <img src="image_gen/train_step_by_step_model/model_training_scripts/x-flux/outputs/sample_outputs/trained_step_by_step_generation_2.png" width="560"> |
 
 ## Approach
 

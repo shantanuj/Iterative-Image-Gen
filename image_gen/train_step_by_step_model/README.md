@@ -45,6 +45,10 @@ The rightmost panel is the original full image generated from the full prompt. T
 
 Example generations from a trained step-by-step FLUX LoRA model:
 
-| Example 1 | Example 2 |
-| --- | --- |
-| <img src="model_training_scripts/x-flux/outputs/sample_outputs/trained_step_by_step_generation_1.png" width="320"> | <img src="model_training_scripts/x-flux/outputs/sample_outputs/trained_step_by_step_generation_2.png" width="320"> |
+| Example 1 |
+| --- |
+| <img src="model_training_scripts/x-flux/outputs/sample_outputs/trained_step_by_step_generation_1.png" width="620"> |
+
+| Example 2 |
+| --- |
+| <img src="model_training_scripts/x-flux/outputs/sample_outputs/trained_step_by_step_generation_2.png" width="620"> |
