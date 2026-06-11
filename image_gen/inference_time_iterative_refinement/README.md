@@ -211,47 +211,50 @@ Example outputs are included under `outputs/sample_outputs/`. The examples below
 <details>
 <summary>Step-by-step trace: glacier-to-savannah panorama</summary>
 
-| Step | Instruction | Image |
+| Step 0 | Step 1 | Step 2 |
 | --- | --- | --- |
-| 0 | Glacier-to-savannah cinematic panorama: icy side (blue ice, snow) has polar bear, arctic fox, woolly mammoth, white tiger in a straight line; warm grassy side has brown bear, red fox, elephant, orange tiger aligned opposite, each facing its counterpart. Seamless transition, no barriers. Soft cinematic light, animated realism, epic scale. | <img src="outputs/sample_outputs/case_0_glacier_savannah/step_0.jpg" width="220"> |
-| 1 | Add a white tiger to the snowy icy side of the panorama, positioned on the ice to face the orange tiger on the grassy side. Adjust the placement of the animals to form two straight lines facing each other across the divide. | <img src="outputs/sample_outputs/case_0_glacier_savannah/step_1.jpg" width="220"> |
-| 2 | Remove the extra partial small brown bear between the elephant and brown bear. Ensure the transition between the icy and grassy environments remains seamless without any physical barriers. | <img src="outputs/sample_outputs/case_0_glacier_savannah/step_2.jpg" width="220"> |
+| <img src="outputs/sample_outputs/case_0_glacier_savannah/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_0_glacier_savannah/step_1.jpg" width="260"> | <img src="outputs/sample_outputs/case_0_glacier_savannah/step_2.jpg" width="260"> |
+| <sub>Initial generation from the full glacier-to-savannah prompt.</sub> | <sub>Add a white tiger to the icy side and align the facing animal rows.</sub> | <sub>Remove the extra partial brown bear and keep the transition seamless.</sub> |
 
 </details>
 
 <details>
 <summary>Step-by-step trace: ducks, giraffe, and novels</summary>
 
-| Step | Instruction | Image |
+| Step 0 | Step 1 | Step 2 |
 | --- | --- | --- |
-| 0 | Four ducks are standing on the ground, and a tiny pink giraffe is standing in front of them holding a bottle with a ship inside it. Five novels are placed on the ground behind the ducks. The image is in cartoon style. | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_0.jpg" width="220"> |
-| 1 | Move the five novels from in front of the ducks to behind them, ensuring they are placed on the ground in the background while keeping all other elements in their correct positions. | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_1.jpg" width="220"> |
-| 2 | Edit the image to make space behind the ducks for novels, ensuring they are placed on the ground in the background while keeping all other elements in their correct positions. | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_2.jpg" width="220"> |
-| 3 | Add one more novel behind the ducks, ensuring there are five novels in total and preserving the overall composition. | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_3.jpg" width="220"> |
-| 4 | Edit the bottle held by the giraffe to have only a single knob, and ensure the entire image is in a cartoon style. | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_4.jpg" width="220"> |
+| <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_1.jpg" width="260"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_2.jpg" width="260"> |
+| <sub>Initial generation from the full duck, giraffe, bottle, and novel prompt.</sub> | <sub>Move the novels behind the ducks while preserving the other objects.</sub> | <sub>Make space behind the ducks for the novels.</sub> |
+
+| Step 3 | Step 4 |
+| --- | --- |
+| <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_3.jpg" width="260"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_4.jpg" width="260"> |
+| <sub>Add one more novel so there are five total.</sub> | <sub>Refine the giraffe's bottle and preserve cartoon style.</sub> |
 
 </details>
 
 <details>
 <summary>Step-by-step trace: glass chicken and spider</summary>
 
-| Step | Instruction | Image |
+| Step 0 | Step 1 | Step 2 |
 | --- | --- | --- |
-| 0 | A woman sits at a table, typing on a red laptop. A black chicken with a glass-like texture stands next to her. A large spider hangs from the ceiling above them. The image has an impressionist style. | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_0.jpg" width="220"> |
-| 1 | Refine the black chicken standing next to the woman on the table, ensuring it has a reflective, glass-like, jewel-like texture, while maintaining the impressionist style of the overall scene. | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_1.jpg" width="220"> |
-| 2 | Edit the black chicken on the table to clearly display a highly reflective, faceted, glass-like or crystalline texture, making it look like a black jewel sculpture, while preserving the impressionistic style of the surrounding scene. | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_2.jpg" width="220"> |
+| <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_1.jpg" width="260"> | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_2.jpg" width="260"> |
+| <sub>Initial generation from the woman, laptop, glass chicken, and spider prompt.</sub> | <sub>Refine the black chicken to have a reflective glass-like texture.</sub> | <sub>Make the chicken clearly faceted and crystalline while preserving impressionist style.</sub> |
 
 </details>
 
 <details>
 <summary>Step-by-step trace: watercolor objects</summary>
 
-| Step | Instruction | Image |
-| --- | --- | --- |
-| 0 | In a watercolor painting, there is a tiny broccoli, one sushi roll, a red pizza, and four cactuses. Additionally, there is a large carrot. | <img src="outputs/sample_outputs/case_3_watercolor_objects/step_0.jpg" width="220"> |
-| 1 | Add one more cactus to the watercolor painting so that there are exactly four cactuses in the scene, keeping the existing large carrot, tiny broccoli, one sushi roll, and red pizza. | <img src="outputs/sample_outputs/case_3_watercolor_objects/step_1.jpg" width="220"> |
-| 2 | Add a tiny watercolor representation of broccoli to the image, ensuring it is positioned near the large carrot or sushi roll, while retaining the existing arrangement of the large carrot, one sushi roll, red pizza slice, and four cactuses. | <img src="outputs/sample_outputs/case_3_watercolor_objects/step_2.jpg" width="220"> |
-| 3 | Remove one of the two identical columnar cactuses located on the far left side of the image, ensuring exactly four distinct cactuses remain in the scene. Preserve the existing large carrot, sushi roll, red pizza slice, and tiny broccoli. | <img src="outputs/sample_outputs/case_3_watercolor_objects/step_3.jpg" width="220"> |
+| Step 0 | Step 1 |
+| --- | --- |
+| <img src="outputs/sample_outputs/case_3_watercolor_objects/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_3_watercolor_objects/step_1.jpg" width="260"> |
+| <sub>Initial generation from the watercolor object prompt.</sub> | <sub>Add one more cactus so the scene has four cactuses.</sub> |
+
+| Step 2 | Step 3 |
+| --- | --- |
+| <img src="outputs/sample_outputs/case_3_watercolor_objects/step_2.jpg" width="260"> | <img src="outputs/sample_outputs/case_3_watercolor_objects/step_3.jpg" width="260"> |
+| <sub>Add a tiny watercolor broccoli near the other objects.</sub> | <sub>Remove the duplicate cactus and preserve the remaining objects.</sub> |
 
 </details>
 

@@ -27,24 +27,25 @@ The image and video inference code runs the test-time iterative refinement loop.
 <details>
 <summary>Step-by-step trace: glacier-to-savannah panorama</summary>
 
-| Step | Instruction | Image |
+| Step 0 | Step 1 | Step 2 |
 | --- | --- | --- |
-| 0 | Glacier-to-savannah cinematic panorama: icy side (blue ice, snow) has polar bear, arctic fox, woolly mammoth, white tiger in a straight line; warm grassy side has brown bear, red fox, elephant, orange tiger aligned opposite, each facing its counterpart. Seamless transition, no barriers. Soft cinematic light, animated realism, epic scale. | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_0_glacier_savannah/step_0.jpg" width="220"> |
-| 1 | Add a white tiger to the snowy icy side of the panorama, positioned on the ice to face the orange tiger on the grassy side. Adjust the placement of the animals to form two straight lines facing each other across the divide. | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_0_glacier_savannah/step_1.jpg" width="220"> |
-| 2 | Remove the extra partial small brown bear between the elephant and brown bear. Ensure the transition between the icy and grassy environments remains seamless without any physical barriers. | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_0_glacier_savannah/step_2.jpg" width="220"> |
+| <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_0_glacier_savannah/step_0.jpg" width="260"> | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_0_glacier_savannah/step_1.jpg" width="260"> | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_0_glacier_savannah/step_2.jpg" width="260"> |
+| <sub>Initial generation from the full glacier-to-savannah prompt.</sub> | <sub>Add a white tiger to the icy side and align the facing animal rows.</sub> | <sub>Remove the extra partial brown bear and keep the transition seamless.</sub> |
 
 </details>
 
 <details>
 <summary>Step-by-step trace: ducks, giraffe, and novels</summary>
 
-| Step | Instruction | Image |
+| Step 0 | Step 1 | Step 2 |
 | --- | --- | --- |
-| 0 | Four ducks are standing on the ground, and a tiny pink giraffe is standing in front of them holding a bottle with a ship inside it. Five novels are placed on the ground behind the ducks. The image is in cartoon style. | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/step_0.jpg" width="220"> |
-| 1 | Move the five novels from in front of the ducks to behind them, ensuring they are placed on the ground in the background while keeping all other elements in their correct positions. | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/step_1.jpg" width="220"> |
-| 2 | Edit the image to make space behind the ducks for novels, ensuring they are placed on the ground in the background while keeping all other elements in their correct positions. | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/step_2.jpg" width="220"> |
-| 3 | Add one more novel behind the ducks, ensuring there are five novels in total and preserving the overall composition. | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/step_3.jpg" width="220"> |
-| 4 | Edit the bottle held by the giraffe to have only a single knob, and ensure the entire image is in a cartoon style. | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/step_4.jpg" width="220"> |
+| <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/step_0.jpg" width="260"> | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/step_1.jpg" width="260"> | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/step_2.jpg" width="260"> |
+| <sub>Initial generation from the full duck, giraffe, bottle, and novel prompt.</sub> | <sub>Move the novels behind the ducks while preserving the other objects.</sub> | <sub>Make space behind the ducks for the novels.</sub> |
+
+| Step 3 | Step 4 |
+| --- | --- |
+| <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/step_3.jpg" width="260"> | <img src="image_gen/inference_time_iterative_refinement/outputs/sample_outputs/case_1_ducks_giraffe_books/step_4.jpg" width="260"> |
+| <sub>Add one more novel so there are five total.</sub> | <sub>Refine the giraffe's bottle and preserve cartoon style.</sub> |
 
 </details>
 
