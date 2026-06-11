@@ -18,6 +18,61 @@ The video backend used by the research scripts is:
 - **Base generator:** Wan2.1 or [Wan2.2](https://github.com/Wan-Video/Wan2.2) text-to-video Gradio server.
 - **Editor:** [UniVideo](https://github.com/KlingAIResearch/UniVideo) video-edit Gradio server. 
 
+## Examples
+
+Example outputs are included under `outputs/sample_outputs/`. The examples below show representative compositional prompts and the final output from our iterative refinement method.
+
+| Baseline | Iterative Refinement |
+| --- | --- |
+| [<img src="outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0_preview.gif" width="400">](outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0.mp4) | [<img src="outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2_preview.gif" width="400">](outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4) |
+
+<p><sub><b>Prompt:</b> A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.</sub></p>
+
+| Baseline | Iterative Refinement |
+| --- | --- |
+| [<img src="outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0_preview.gif" width="400">](outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0.mp4) | [<img src="outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1_preview.gif" width="400">](outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4) |
+
+<p><sub><b>Prompt:</b> A woman is watering flowers in garden while rabbit watches and yellow butterfly flies around.</sub></p>
+
+| Baseline | Iterative Refinement |
+| --- | --- |
+| [<img src="outputs/sample_outputs/case_3_child_tree_dog_cat/parallel/sample_0_preview.gif" width="400">](outputs/sample_outputs/case_3_child_tree_dog_cat/parallel/sample_0.mp4) | [<img src="outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1_preview.gif" width="400">](outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4) |
+
+<p><sub><b>Prompt:</b> A child walks toward a tree holding a ball. A dog walks to the right of the child. A cat sits under the tree and starts walking towards the dog.</sub></p>
+
+<details>
+<summary>Step-by-step trace: knight, castle, horse, and red bird</summary>
+
+| Step | Instruction | Video |
+| --- | --- | --- |
+| 0 | Original generation | [MP4](outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_0_core.mp4) |
+| 1 | Add a white horse walking on left of the knight. | [MP4](outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_2_add1.mp4) |
+| 2 | Add a red bird flying in the background. | [MP4](outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4) |
+
+</details>
+
+<details>
+<summary>Step-by-step trace: garden, rabbit, and butterfly</summary>
+
+| Step | Instruction | Video |
+| --- | --- | --- |
+| 0 | Original generation | [MP4](outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_0_core.mp4) |
+| 1 | Add a yellow butterfly flying around the garden. | [MP4](outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4) |
+
+</details>
+
+<details>
+<summary>Step-by-step trace: child, tree, dog, and cat</summary>
+
+| Step | Instruction | Video |
+| --- | --- | --- |
+| 0 | Original generation | [MP4](outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_0_core.mp4) |
+| 1 | Add a cat sitting calmly under the tree in the shade and then walking towards the dog. | [MP4](outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4) |
+
+</details>
+
+Additional sample outputs are available under `outputs/sample_outputs/`.
+
 ## Install
 
 ```bash
@@ -334,61 +389,6 @@ Each run writes:
 - `plan.json`: step-by-step plan, when applicable.
 - `trajectory_N/trajectory.json`: per-stream videos, prompts, actions, raw VLM responses, and scores.
 - `summary.json`: aggregate best candidate and optional eval-verifier result.
-
-## Examples
-
-Example outputs are included under `outputs/sample_outputs/`. The examples below show representative compositional prompts and the final output from our iterative refinement method.
-
-| Baseline | Iterative Refinement |
-| --- | --- |
-| [<img src="outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0_preview.gif" width="400">](outputs/sample_outputs/case_1_knight_castle_horse_bird/parallel/sample_0.mp4) | [<img src="outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2_preview.gif" width="400">](outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4) |
-
-<p><sub><b>Prompt:</b> A knight walking to a castle carrying a sword. A dragon emitting flames from its mouth sits on top of the castle. A red bird flying in the background. A white horse walking on left of the knight.</sub></p>
-
-| Baseline | Iterative Refinement |
-| --- | --- |
-| [<img src="outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0_preview.gif" width="400">](outputs/sample_outputs/case_2_garden_rabbit_butterfly/parallel/sample_0.mp4) | [<img src="outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1_preview.gif" width="400">](outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4) |
-
-<p><sub><b>Prompt:</b> A woman is watering flowers in garden while rabbit watches and yellow butterfly flies around.</sub></p>
-
-| Baseline | Iterative Refinement |
-| --- | --- |
-| [<img src="outputs/sample_outputs/case_3_child_tree_dog_cat/parallel/sample_0_preview.gif" width="400">](outputs/sample_outputs/case_3_child_tree_dog_cat/parallel/sample_0.mp4) | [<img src="outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1_preview.gif" width="400">](outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4) |
-
-<p><sub><b>Prompt:</b> A child walks toward a tree holding a ball. A dog walks to the right of the child. A cat sits under the tree and starts walking towards the dog.</sub></p>
-
-<details>
-<summary>Step-by-step trace: knight, castle, horse, and red bird</summary>
-
-| Step | Instruction | Video |
-| --- | --- | --- |
-| 0 | Original generation | [MP4](outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_0_core.mp4) |
-| 1 | Add a white horse walking on left of the knight. | [MP4](outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_2_add1.mp4) |
-| 2 | Add a red bird flying in the background. | [MP4](outputs/sample_outputs/case_1_knight_castle_horse_bird/trajectory_0/step_4_add2.mp4) |
-
-</details>
-
-<details>
-<summary>Step-by-step trace: garden, rabbit, and butterfly</summary>
-
-| Step | Instruction | Video |
-| --- | --- | --- |
-| 0 | Original generation | [MP4](outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_0_core.mp4) |
-| 1 | Add a yellow butterfly flying around the garden. | [MP4](outputs/sample_outputs/case_2_garden_rabbit_butterfly/trajectory_0/step_2_add1.mp4) |
-
-</details>
-
-<details>
-<summary>Step-by-step trace: child, tree, dog, and cat</summary>
-
-| Step | Instruction | Video |
-| --- | --- | --- |
-| 0 | Original generation | [MP4](outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_0_core.mp4) |
-| 1 | Add a cat sitting calmly under the tree in the shade and then walking towards the dog. | [MP4](outputs/sample_outputs/case_3_child_tree_dog_cat/trajectory_0/step_2_add1.mp4) |
-
-</details>
-
-Additional sample outputs are available under `outputs/sample_outputs/`.
 
 ## Smoke Test
 

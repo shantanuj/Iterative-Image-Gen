@@ -12,6 +12,84 @@ The core loop is:
 
 The system prompt templates are copied from the research code and are kept in `iterative_img_gen/prompts.py`.
 
+## Examples
+
+Example outputs are included under `outputs/sample_outputs/`. The examples below show representative compositional prompts and the final output from our iterative refinement method.
+
+| Baseline | Iterative Refinement |
+| --- | --- |
+| <img src="outputs/sample_outputs/case_0_glacier_savannah/gpt.jpg" width="400"> | <img src="outputs/sample_outputs/case_0_glacier_savannah/iter_refine.jpg" width="400"> |
+
+<p><sub><b>Prompt:</b> Glacier-to-savannah cinematic panorama: icy side (blue ice, snow) has polar bear, arctic fox, woolly mammoth, white tiger in a straight line; warm grassy side has brown bear, red fox, elephant, orange tiger aligned opposite, each facing its counterpart. Seamless transition, no barriers. Soft cinematic light, animated realism, epic scale.</sub></p>
+
+| Baseline | Iterative Refinement |
+| --- | --- |
+| <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/gpt.jpg" width="400"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/iter_refine.jpg" width="400"> |
+
+<p><sub><b>Prompt:</b> Four ducks are standing on the ground, and a tiny pink giraffe is standing in front of them holding a bottle with a ship inside it. Five novels are placed on the ground behind the ducks. The image is in a cartoon style.</sub></p>
+
+| Baseline | Iterative Refinement |
+| --- | --- |
+| <img src="outputs/sample_outputs/case_2_glass_chicken_spider/gpt.jpg" width="400"> | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/iter_refine.jpg" width="400"> |
+
+<p><sub><b>Prompt:</b> A woman sits at a table, typing on a red laptop. A black chicken with a glass-like texture stands next to her. A large spider hangs from the ceiling above them. The image has an impressionist style.</sub></p>
+
+| Baseline | Iterative Refinement |
+| --- | --- |
+| <img src="outputs/sample_outputs/case_3_watercolor_objects/qwen.jpg" width="400"> | <img src="outputs/sample_outputs/case_3_watercolor_objects/iter_refine.jpg" width="400"> |
+
+<p><sub><b>Prompt:</b> In a watercolor painting, there is a tiny broccoli, one sushi roll, a red pizza, and four cactuses. Additionally, there is a large carrot.</sub></p>
+
+<details>
+<summary>Step-by-step trace: glacier-to-savannah panorama</summary>
+
+| Step 0 | Step 1 | Step 2 |
+| --- | --- | --- |
+| <img src="outputs/sample_outputs/case_0_glacier_savannah/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_0_glacier_savannah/step_1.jpg" width="260"> | <img src="outputs/sample_outputs/case_0_glacier_savannah/step_2.jpg" width="260"> |
+| <sub>Initial generation from the full glacier-to-savannah prompt.</sub> | <sub>Add a white tiger to the icy side and align the facing animal rows.</sub> | <sub>Remove the extra partial brown bear and keep the transition seamless.</sub> |
+
+</details>
+
+<details>
+<summary>Step-by-step trace: ducks, giraffe, and novels</summary>
+
+| Step 0 | Step 1 | Step 2 |
+| --- | --- | --- |
+| <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_1.jpg" width="260"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_2.jpg" width="260"> |
+| <sub>Initial generation from the full duck, giraffe, bottle, and novel prompt.</sub> | <sub>Move the novels behind the ducks while preserving the other objects.</sub> | <sub>Make space behind the ducks for the novels.</sub> |
+
+| Step 3 | Step 4 |
+| --- | --- |
+| <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_3.jpg" width="260"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_4.jpg" width="260"> |
+| <sub>Add one more novel so there are five total.</sub> | <sub>Refine the giraffe's bottle and preserve cartoon style.</sub> |
+
+</details>
+
+<details>
+<summary>Step-by-step trace: glass chicken and spider</summary>
+
+| Step 0 | Step 1 | Step 2 |
+| --- | --- | --- |
+| <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_1.jpg" width="260"> | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_2.jpg" width="260"> |
+| <sub>Initial generation from the woman, laptop, glass chicken, and spider prompt.</sub> | <sub>Refine the black chicken to have a reflective glass-like texture.</sub> | <sub>Make the chicken clearly faceted and crystalline while preserving impressionist style.</sub> |
+
+</details>
+
+<details>
+<summary>Step-by-step trace: watercolor objects</summary>
+
+| Step 0 | Step 1 |
+| --- | --- |
+| <img src="outputs/sample_outputs/case_3_watercolor_objects/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_3_watercolor_objects/step_1.jpg" width="260"> |
+| <sub>Initial generation from the watercolor object prompt.</sub> | <sub>Add one more cactus so the scene has four cactuses.</sub> |
+
+| Step 2 | Step 3 |
+| --- | --- |
+| <img src="outputs/sample_outputs/case_3_watercolor_objects/step_2.jpg" width="260"> | <img src="outputs/sample_outputs/case_3_watercolor_objects/step_3.jpg" width="260"> |
+| <sub>Add a tiny watercolor broccoli near the other objects.</sub> | <sub>Remove the duplicate cactus and preserve the remaining objects.</sub> |
+
+</details>
+
 ## Install
 
 ```bash
@@ -179,84 +257,6 @@ iterative-image-gen run \
 ```
 
 `mode=all` uses `iterations * parallel` one-step samples for the parallel baseline.
-
-## Examples
-
-Example outputs are included under `outputs/sample_outputs/`. The examples below show representative compositional prompts and the final output from our iterative refinement method.
-
-| Baseline | Iterative Refinement |
-| --- | --- |
-| <img src="outputs/sample_outputs/case_0_glacier_savannah/gpt.jpg" width="400"> | <img src="outputs/sample_outputs/case_0_glacier_savannah/iter_refine.jpg" width="400"> |
-
-<p><sub><b>Prompt:</b> Glacier-to-savannah cinematic panorama: icy side (blue ice, snow) has polar bear, arctic fox, woolly mammoth, white tiger in a straight line; warm grassy side has brown bear, red fox, elephant, orange tiger aligned opposite, each facing its counterpart. Seamless transition, no barriers. Soft cinematic light, animated realism, epic scale.</sub></p>
-
-| Baseline | Iterative Refinement |
-| --- | --- |
-| <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/gpt.jpg" width="400"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/iter_refine.jpg" width="400"> |
-
-<p><sub><b>Prompt:</b> Four ducks are standing on the ground, and a tiny pink giraffe is standing in front of them holding a bottle with a ship inside it. Five novels are placed on the ground behind the ducks. The image is in a cartoon style.</sub></p>
-
-| Baseline | Iterative Refinement |
-| --- | --- |
-| <img src="outputs/sample_outputs/case_2_glass_chicken_spider/gpt.jpg" width="400"> | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/iter_refine.jpg" width="400"> |
-
-<p><sub><b>Prompt:</b> A woman sits at a table, typing on a red laptop. A black chicken with a glass-like texture stands next to her. A large spider hangs from the ceiling above them. The image has an impressionist style.</sub></p>
-
-| Baseline | Iterative Refinement |
-| --- | --- |
-| <img src="outputs/sample_outputs/case_3_watercolor_objects/qwen.jpg" width="400"> | <img src="outputs/sample_outputs/case_3_watercolor_objects/iter_refine.jpg" width="400"> |
-
-<p><sub><b>Prompt:</b> In a watercolor painting, there is a tiny broccoli, one sushi roll, a red pizza, and four cactuses. Additionally, there is a large carrot.</sub></p>
-
-<details>
-<summary>Step-by-step trace: glacier-to-savannah panorama</summary>
-
-| Step 0 | Step 1 | Step 2 |
-| --- | --- | --- |
-| <img src="outputs/sample_outputs/case_0_glacier_savannah/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_0_glacier_savannah/step_1.jpg" width="260"> | <img src="outputs/sample_outputs/case_0_glacier_savannah/step_2.jpg" width="260"> |
-| <sub>Initial generation from the full glacier-to-savannah prompt.</sub> | <sub>Add a white tiger to the icy side and align the facing animal rows.</sub> | <sub>Remove the extra partial brown bear and keep the transition seamless.</sub> |
-
-</details>
-
-<details>
-<summary>Step-by-step trace: ducks, giraffe, and novels</summary>
-
-| Step 0 | Step 1 | Step 2 |
-| --- | --- | --- |
-| <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_1.jpg" width="260"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_2.jpg" width="260"> |
-| <sub>Initial generation from the full duck, giraffe, bottle, and novel prompt.</sub> | <sub>Move the novels behind the ducks while preserving the other objects.</sub> | <sub>Make space behind the ducks for the novels.</sub> |
-
-| Step 3 | Step 4 |
-| --- | --- |
-| <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_3.jpg" width="260"> | <img src="outputs/sample_outputs/case_1_ducks_giraffe_books/step_4.jpg" width="260"> |
-| <sub>Add one more novel so there are five total.</sub> | <sub>Refine the giraffe's bottle and preserve cartoon style.</sub> |
-
-</details>
-
-<details>
-<summary>Step-by-step trace: glass chicken and spider</summary>
-
-| Step 0 | Step 1 | Step 2 |
-| --- | --- | --- |
-| <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_1.jpg" width="260"> | <img src="outputs/sample_outputs/case_2_glass_chicken_spider/step_2.jpg" width="260"> |
-| <sub>Initial generation from the woman, laptop, glass chicken, and spider prompt.</sub> | <sub>Refine the black chicken to have a reflective glass-like texture.</sub> | <sub>Make the chicken clearly faceted and crystalline while preserving impressionist style.</sub> |
-
-</details>
-
-<details>
-<summary>Step-by-step trace: watercolor objects</summary>
-
-| Step 0 | Step 1 |
-| --- | --- |
-| <img src="outputs/sample_outputs/case_3_watercolor_objects/step_0.jpg" width="260"> | <img src="outputs/sample_outputs/case_3_watercolor_objects/step_1.jpg" width="260"> |
-| <sub>Initial generation from the watercolor object prompt.</sub> | <sub>Add one more cactus so the scene has four cactuses.</sub> |
-
-| Step 2 | Step 3 |
-| --- | --- |
-| <img src="outputs/sample_outputs/case_3_watercolor_objects/step_2.jpg" width="260"> | <img src="outputs/sample_outputs/case_3_watercolor_objects/step_3.jpg" width="260"> |
-| <sub>Add a tiny watercolor broccoli near the other objects.</sub> | <sub>Remove the duplicate cactus and preserve the remaining objects.</sub> |
-
-</details>
 
 ## Run Options
 

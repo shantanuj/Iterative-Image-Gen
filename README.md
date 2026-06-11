@@ -138,7 +138,7 @@ bash setup.sh
 micromamba activate iterative-video-gen
 ```
 
-Training data generation:
+Training data generation (for step by step training):
 
 ```bash
 cd image_gen/train_step_by_step_model/synthetic_data_creation
